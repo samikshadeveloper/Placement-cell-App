@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<%- include('_bootstrap_meta')%>
+
+		<title>Sign In</title>
+	</head>
+	<body style="background-color: #e6e9e9; font-family: 'Times New Roman', Times, serif">
+		<%- include('_header')%>
+		<div
+			class="w-50 mx-auto mt-4"
+			style="
+				height: 90vh;
+				display: grid;
+				place-content: center;
+				width: 500px;
+				background: #edd3d3;
+				border-radius: 5px;
+				box-shadow: 7px 7px 12px rgba(11, 10, 10, 0.402);
+			"
+		>
+			<div class="mx-auto mt-3 mb-3" style="width: 100px ">
+				<h4>Sign In</h4>
+			</div>
+
+			<form action="/users/create-session" method="POST" style="width: 300px">
+				<!-- Email input -->
+				<div class="form-outline mb-3">
+					<label class="form-label" for="email">Enter Email</label>
+					<input type="email" class="form-control" id="email" placeholder="abc@email.com" name="email" required />
+				</div>
+
+				<!-- Password input -->
+				<div class="form-outline mb-3">
+					<label class="form-label" for="password">Enter Password</label>
+					<input type="password" id="password" class="form-control" name="password" required />
+				</div>
+
+				<!-- Submit button -->
+				<button type="submit" class="btn btn-success btn-block mb-4">Sign in</button>
+				<div >
+					<span>For Demo </span><br>
+					<span >Email: testmodel@mail.com  </span><br>
+				<span >Password : Test123 </span>
+				</div>
+
+				<!-- Register buttons -->
+				<div class="text-center">
+					<p>No Account? <a href="/users/signup">Register</a></p>
+				</div>
+			</form>
+		</div>
+		<%- include('_bootstrap_script')%>
+	</body>
+</html>

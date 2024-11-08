@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <%- include('_bootstrap_meta')%>
+    <title>Sign Up</title>
+</head>
+
+<body style="background-color: #e6e9e9; font-family: 'Times New Roman', Times, serif;">
+  <%- include('_header')%>
+    <div class="w-50 mx-auto mt-4" style="display: grid;
+     place-content: center; 
+     width: 50px; 
+     background: #edd3d3;
+     border-radius: 5px;
+     box-shadow: 7px 7px 12px rgba(11, 10, 10, 0.402);">
+
+      <div class="mx-auto mt-3 mb-3" style="width: 100px">
+        <h4>Sign Up</h4>
+      </div>
+      <div class="mb3">
+        <form action="/users/create" method="post">
+
+          <label for="name" class="form-label">Name</label>
+          <input type="text" class="form-control" id="name" name="name" placeholder="John Doe" required />
+      </div>
+
+      <div class="mb-3">
+        <label for="email" class="form-label">Email</label>
+        <input type="email" class="form-control" id="email" placeholder="abc@email.com" name="email" required />
+      </div>
+
+      <div class="mb-3">
+        <label for="password" class="form-label">Password</label>
+        <input type="password" class="form-control" id="password" name="password" required />
+      </div>
+
+      <div class="mb-3">
+        <label for="Password" class="form-label">Confirm Password</label>
+        <input type="password" class="form-control" id="confirmPassword" name="confirmPassword" required />
+      </div>
+      <div class="mb-2 mt-2" style="display: flex; justify-content: center">
+        <button type="submit" class="btn btn-success btn-block mb-1">Sign Up</button>
+      </div>
+      </form>
+      <div class="mx-auto mb-1 mt-1" style="width: 300px">
+        <a href="/users/signin" style="margin-left: 100px">Log in Instead</a>
+      </div>
+    </div>
+    <%- include('_bootstrap_script')%>
+
+</body>
+
+</html>
